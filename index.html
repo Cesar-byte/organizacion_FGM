@@ -1,10 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Mi página web</title>
-  <script src="script.js"></script>
+  <title>Llamar a un archivo Python desde HTML</title>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 </head>
 <body>
-  <h1>Hola, mundo!</h1>
+  <h1>Llamar a un archivo Python desde HTML</h1>
+  
+  <button onclick="llamarPython()">Llamar a Python</button>
+  
+  <div id="resultado"></div>
+
+  <script>
+    function llamarPython() {
+      $.ajax({
+        url: 'archivo.py', // Nombre del archivo Python
+        type: 'GET',
+        success: function(data) {
+          document.getElementById('resultado').innerText = data;
+        },
+        error: function() {
+          document.getElementById('resultado').innerText = 'Error al llamar al archivo Python.';
+        }
+      });
+    }
+  </script>
 </body>
 </html>
