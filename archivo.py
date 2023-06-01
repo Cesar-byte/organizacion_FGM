@@ -2,7 +2,7 @@
 
 def obtener_datos():
     # Realiza alguna lógica para obtener los datos que deseas devolver
-    datos = "Estos son los datos que devuelve el archivo Python."
+    datos = "Hola"
     return datos
 
 # Punto de entrada del programa
